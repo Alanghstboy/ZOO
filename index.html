@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoológico Safari Mundo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar container">
+      <a href="#inicio" class="logo">🦁 Safari Mundo</a>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#animales">Animales</a></li>
+        <li><a href="#horarios">Horarios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">🌙</button>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="hero-content container">
+      <h1>Bienvenidos al Zoológico Safari Mundo</h1>
+      <p>Descubre más de 300 especies de animales de todo el mundo, vive una experiencia inolvidable en plena naturaleza.</p>
+      <a href="#animales" class="btn">Explorar Animales</a>
+    </div>
+  </section>
+
+  <section id="animales" class="animals container">
+    <h2 class="section-title">Nuestros Animales</h2>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="todos">Todos</button>
+      <button class="filter-btn" data-filter="mamifero">Mamíferos</button>
+      <button class="filter-btn" data-filter="ave">Aves</button>
+      <button class="filter-btn" data-filter="reptil">Reptiles</button>
+    </div>
+
+    <div class="grid" id="animalGrid">
+      <!-- Los animales se renderizan con JavaScript -->
+    </div>
+  </section>
+
+  <section id="horarios" class="schedule">
+    <div class="container">
+      <h2 class="section-title">Horarios</h2>
+      <div class="schedule-cards">
+        <div class="card-info">
+          <h3>🕘 Lunes a Viernes</h3>
+          <p>09:00 - 18:00</p>
+        </div>
+        <div class="card-info">
+          <h3>🕘 Sábados y Domingos</h3>
+          <p>09:00 - 20:00</p>
+        </div>
+        <div class="card-info">
+          <h3>🎟️ Entradas</h3>
+          <p>Adultos $10 · Niños $5</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contact container">
+    <h2 class="section-title">Contáctanos</h2>
+    <form id="contactForm" class="contact-form">
+      <input type="text" id="nombre" placeholder="Tu nombre" required>
+      <input type="email" id="email" placeholder="Tu email" required>
+      <textarea id="mensaje" placeholder="Tu mensaje" rows="5" required></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+    <p id="formMessage" class="form-message"></p>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Zoológico Safari Mundo · Todos los derechos reservados</p>
+  </footer>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
